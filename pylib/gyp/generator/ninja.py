@@ -1917,7 +1917,7 @@ def GenerateOutputForConfig(target_list, target_dicts, data, params,
       ar_host = os.path.join(build_to_root, value)
     if key == 'CC':
       cc = os.path.join(build_to_root, value)
-      if cc.endswith('clang-cl'):
+      if cc.endswith('clang-cl') or cc.endswith('clang-cl.exe'):
         clang_cl = cc
     if key == 'CXX':
       cxx = os.path.join(build_to_root, value)
